@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello Bulma!</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <style>
+    .top-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      padding: 1.5rem;
+      background-color: #eee7d5
+    }
+
+    #topic-nav {
+      background-color: #eee7d570;
+    }
+    .topic-nav-item {
+      margin: 4px;
+      border: 2px solid #eee7d5; border-radius: 5px; margin-right: 5px;
+      //background-color: #eee7d540; //#00aae6;
+    }
+    .topic-nav-item:last-child {
+      margin-right: auto;
+    }
+    .topic-nav-item .level-item span {
+      padding-left: 10px;
+      font-size: 14px;
+      text-transform: uppercase;
+    }
+
+    .topic-nav-item a {
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #fff;
+      background-color: #fff;
+      width: 65px;
+      height: 65px;
+    }
+
+    /*.topic-nav-link:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    border-radius: 50%;
+    z-index: 333;
+    border: 1px solid #f2b541;
+    opacity: 0;
+    transform: scale(.85);
+    transition: opacity .2s ease-in-out,transform .2s ease-in-out .1s;
+}*/
+
+    .topic-nav-item img:hover~a {
+      border-color: red;
+    }
+
+    .topic-nav-item img {
+      border-radius: 50%;
+      transition: transform .3s ease;
+      transform: scale(.87);
+    }
+
+    .topic-nav-item img:hover {
+      transform: scale(1);
+      transition: transform .35s cubic-bezier(.18, .89, .19, 1.37);
+    }
+
+    .hero {
+    position: relative;
+      z-index: 1;
+      background-color: #ccc;
+      //margin-left: 44px; // margin-right: 44px;
+    }
+
+    .hero:before {
+//      background: url(./images/27993145_1576524869067445_3938364592319286042_o.jpg);
+      background: url(./images/P1030473.JPG);
+//      background: url('./images/Screen Shot 2018-03-10 at 22.36.05.png');
+      background-size: cover;
+      opacity: 0.6;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      content: "";
+      z-index: -1;
+    }
+
+    .hero-body h1 {
+      //color: #fff17e;
+      //color: #00AAE6;
+      color: #44f;
+      font-family: sans;
+
+      text-shadow: 2px 2px 8px #fff17e;
+    }
+
+    .hero-body h2 {
+      text-shadow: 2px 2px 8px #fff17e;
+      color: #44f;//#fff17e;
+    }
+
+    .testimonial-area {
+      padding: 50px;
+      overflow: hidden;
+    }
+
+.testimonial-area p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+//    margin-bottom: 25px;
+    margin-top: 0;
+    padding: 0 50px;
+    text-align: center;
+}
+
+.testimonial-area p {
+  padding: 20px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.testimonial-area p:first-child {
+  padding-top: 40px;
+}
+
+    .testimonial-area h2 {
+        font-family: 'Roboto';
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 25px;
+        margin: 0 0 15px;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .testimonial-area h2 {
+    color: #2a2c33;
+  }
+
+  .testimonial-area h2 > i {
+      width: 40px;
+      height: 1px;
+      display: inline-block;
+      margin: 0px 10px;
+      vertical-align: middle;
+  }
+  .testimonial-area h2 > i {
+      background-color: #ffffff;
+  }
+
+  .sc_item_head:not(.no_image):after {
+      content: ' ';
+      display: block;
+      width: 220px;
+      height: 36px;
+      margin: 0.35em auto 1.2em;
+      background-image: url(./images/title_line.png);
+      background-size: cover;
+      background-position: center;
+  }
+  .sc_item_head {
+      margin: 0 0 3.1em;
+  }
+  </style>
+</head>
+
+<body xstyle="background-color: #e0f0f8;">
+  <!--div class="button" style="position: fixed; bottom: 5px; right: 5px; width: 40px; z-index: 100;">
+    v
+  <div-->
+
+  <section class="hero is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <nav class="navbar is-fixed" style="xbackground-color: #ffffff;">
+        <div class="container" style="height: 60px;">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./images/site-logo3.png" alt="Logo" style="max-height: 40px; height: 40px; width: 170px;">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenuHeroA" class="navbar-menu">
+            <div class="navbar-end" style="font-size: 20px;">
+              <a class="navbar-item is-active">
+                Sobre
+              </a>
+              <a class="navbar-item is-active">
+                Blog
+              </a>
+              <a class="navbar-item" style="padding-right: 40px;">
+                Eventos
+              </a>
+              <a class="navbar-item" style="font-size: 20px; background: transparent url(./images/phone.png) no-repeat left center;">
+                &nbsp;&nbsp;&nbsp;051 98030 4137
+              </a>
+              <!--span class="navbar-item">
+                <a class="button is-primary is-inverted">
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Download</span>
+                </a>
+              </span-->
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section id="topic-nav" class="section" style="padding: 12px; xbackground-color: #00aae6; margin-bottom: 12px; display: none">
+        <div class="container is-fluid columns" style="xbackground-color: #00aae6;">
+          <div class="topic-nav-item column">
+            <div class="level">
+              <div class="level-item">
+                <a class="xtopic-nav-link">
+                    <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                  </a>
+                <span>Despertar</span>
+              </div>
+            </div>
+          </div>
+          <div class="topic-nav-item column">
+            <div class="level">
+              <div class="level-item">
+                <a class="">
+                    <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                  </a>
+                <span>Biodinâmica</span>
+              </div>
+            </div>
+          </div>
+          <div class="topic-nav-item column">
+            <div class="level">
+              <div class="level-item">
+                <a class="">
+                    <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                  </a>
+                <span>Autoterapia</span>
+              </div>
+            </div>
+          </div>
+          <div class="topic-nav-item column">
+            <div class="level">
+              <div class="level-item">
+                <a class="">
+                    <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                  </a>
+                <span>Parapsiquismo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body is-background">
+      <div class="container has-text-centered">
+        <h1 class="title is-size-1" style="font-size: 6rem;">
+          Holoterapia Biodinâmica
+        </h1>
+        <h2 class="subtitle  is-size-3">
+          Uma Terapia para um Mundo Novo
+        </h2>
+
+      </div>
+    </div>
+
+    <!-- Hero footer: will stick at the bottom -->
+    <section id="topic-nav" class="section" style="padding: 12px;">
+      <div class="container is-fluid columns">
+        <div class="topic-nav-item column">
+          <div class="level">
+            <div class="level-item">
+              <a class="xtopic-nav-link">
+                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                </a>
+              <span>Despertar</span>
+            </div>
+          </div>
+        </div>
+        <div class="topic-nav-item column">
+          <div class="level">
+            <div class="level-item">
+              <a class="">
+                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                </a>
+              <span>Biodinâmica</span>
+            </div>
+          </div>
+        </div>
+        <div class="topic-nav-item column">
+          <div class="level">
+            <div class="level-item">
+              <a class="">
+                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                </a>
+              <span>Autoterapia</span>
+            </div>
+          </div>
+        </div>
+        <div class="topic-nav-item column">
+          <div class="level">
+            <div class="level-item">
+              <a class="">
+                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
+                </a>
+              <span>Parapsiquismo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!--nav class="tabs">
+        <div class="container">
+          <ul>
+            <li class="is-active"><a>Overview</a></li>
+            <li><a>Modifiers</a></li>
+            <li><a>Grid</a></li>
+            <li><a>Elements</a></li>
+            <li><a>Components</a></li>
+            <li><a>Layout</a></li>
+          </ul>
+        </div>
+      </nav-->
+    </div>
+  </section>
+
+  <script src="./js/bulma-carousel.js"></script>
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+
+  <section style="height: 850px; background: url('./images/P1020593 edited.jpg'); background-size: cover; ">
+    <div class='sc_item_head' style="padding-top: 80px; margin-bottom: 0px;">
+      <!--h1 class='title has-text-centered is-size-5'> Hello </h1-->
+      <h2 class='sub-title has-text-centered is-size-3' style="padding-top: 0px; color: white">O que as pessoas dizem sobre Unimundo</h2>
+    </div>
+
+    <div class="testimonial-area container">
+
+    <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true"  style='border: 1px solid #fff17e; border-radius: 10px; height: 100%; max-height: 500px; xpadding-top: 30px; background-color: #8cc8'>
+      <div class='carousel-container'>
+        <div class='carousel-item is-active'>
+          <video  width="100%">
+            <source src="./images/28b70b7c-4e7e-49b3-b950-c8bf88cfb9a5.mp4">
+            Your browser does not support the video tag.
+            </video>
+          <!--video class="is-background" src="" alt=""  /-->
+          <div class="title">Encontre Serenidade</div>
+        </div>
+        <div class='carousel-item'>
+          <p>Um grande diferencial que percebo no Unimundo é a atuação explicita e clara da equipe de
+            amparadores terapeutas técnicos, sem misticismos e sem envolver questões religiosas que,
+            no meu atual estágio, já se tornaram desnecessárias. Um fenômeno bastante comum que ocorre
+            em decorrência do tratamento holoterápico é a resolução, muitas vezes silenciosa, dos nós
+            górdios, ou seja, das questões difíceis e inibidoras do nosso processo evolutivo.
+          </p>
+          <p>O meu contato com o Unimundo tem me proporcionados significativos ganhos concretos e perceptíveis,
+            entre os quais cito o realinhamento do meu projeto de vida e a aprendizagem prática de
+            como trabalhar ombro-a-ombro com as equipes de amparadores, tanto pessoais quanto grupais.
+          </p>
+          <h2><i></i>Sean Michael Wykes<i></i></h2>
+          </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="blob:https://web.whatsapp.com/28b70b7c-4e7e-49b3-b950-c8bf88cfb9a5" alt="" width="640" height="310" />
+          <div class="title">O caminho para ser trilhado</div>
+        </div>
+        <div class='carousel-item has-background'>
+          <img class="xis-background" src="blob:https://web.whatsapp.com/28b70b7c-4e7e-49b3-b950-c8bf88cfb9a5" alt="" width="640" height="310" />
+          <div class="title">Hora do desabrochar da sua Consciência</div>
+        </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="./images/CIHB 2_04 JAN 2005 GALETO_72.JPG" alt="" width="640" height="310" />
+          <div class="title">Holoterapeutas</div>
+        </div>
+      </div>
+      <div class="carousel-navigation is-centered">
+        <div class="carousel-nav-left">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel-nav-right">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+  <section style="height: 850px; background: url('./images/Screen Shot 2018-03-10 at 22.36.05.png');background-size: cover; ">
+    <div class='sc_item_head' style="padding-top: 80px; xmargin-bottom: 20px;">
+      <!--h1 class='title has-text-centered is-size-5'> Hello </h1-->
+      <h2 class='sub-title has-text-centered is-size-3' style="padding-top: 0px; color: white">O que as pessoas dizem sobre Unimundo</h2>
+    </div>
+
+    <div class="testimonial-area container" style="padding-top: 30px">
+
+    <div class='carousel carousel-animated carousel-animate-slide' data-autoplay="true"  style='border: 1px solid #fff17e; border-radius: 10px; height: 100%; max-height: 500px;'>
+      <div class='carousel-container'>
+        <div class='carousel-item is-active'>
+          <p>Um grande diferencial que percebo no Unimundo é a atuação explicita e clara da equipe de
+            amparadores terapeutas técnicos, sem misticismos e sem envolver questões religiosas que,
+            no meu atual estágio, já se tornaram desnecessárias. Um fenômeno bastante comum que ocorre
+            em decorrência do tratamento holoterápico é a resolução, muitas vezes silenciosa, dos nós
+            górdios, ou seja, das questões difíceis e inibidoras do nosso processo evolutivo.
+          </p>
+          <p>O meu contato com o Unimundo, ao longo de quatro anos, inicialmente como holociente,
+            depois como aluno do curso de formação em Holoterapia Biodinâmica e agora como colaborador
+            voluntário, tem me proporcionados significativos ganhos concretos e perceptíveis,
+            entre os quais cito o realinhamento do meu projeto de vida e a aprendizagem prática de
+            como trabalhar ombro-a-ombro com as equipes de amparadores tanto pessoais quanto grupais.
+          </p>
+          <h2><i></i>Sean<i></i></h2>
+          </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="./images/CIHB 2_14 AGO 2005_36.jpg" alt="" width="640" height="310" />
+          <div class="title">Encontre Serenidade</div>
+        </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="./images/CIHB 2_14 AGO 2005_12.jpg" alt="" width="640" height="310" />
+          <div class="title">O caminho para ser trilhado</div>
+        </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="./images/CIHB 2_14 AGO 2005_08.jpg" alt="" width="640" height="310" />
+          <div class="title">Hora do desabrochar da sua Consciência</div>
+        </div>
+        <div class='carousel-item has-background'>
+          <img class="is-background" src="./images/CIHB 2_04 JAN 2005 GALETO_72.JPG" alt="" width="640" height="310" />
+          <div class="title">Holoterapeutas</div>
+        </div>
+      </div>
+      <div class="carousel-navigation is-centered">
+        <div class="carousel-nav-left">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </div>
+        <div class="carousel-nav-right">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <!--div class="top-logo">
+      <a><img src="./images/site-logo.gif" style="height:65px" alt="Site"></a>
+    </div-->
+
+  <!--nav class="navbar" style="padding: 0.5rem; background-color: #eee7d5;" role="navigation" aria-label="main navigation">
+    <div class="container is-fluid">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="https://unimundo.org">
+            <img src="./images/site-logo3.png" alt="Unimundo" style="height: 65px">
+          </a>
+      </div>
+
+      <div class="navbar-end navbar-item">
+        Home
+      </div>
+
+      <div class="navbar-item has-dropdown  is-hoverable">
+        <a class="navbar-link">
+          Holoterapia Biodinâmica
+        </a>
+
+        <div class="navbar-dropdown">
+          <a class="navbar-item">
+            O que é
+          </a>
+          <a class="navbar-item">
+            Como atua
+          </a>
+          <a class="navbar-item">
+            Para quem
+          </a>
+          <hr class="navbar-divider">
+          <div class="navbar-item">
+            Fundadora
+          </div>
+        </div>
+      </div>
+
+      <div class="navbar-burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </nav-->
+
+  <section class="section" style="height: 160px;">
+    <div class="container">
+      <h3 class="has-text-centered is-primary">BEM VINDO</h3>
+    </div>
+  </section>
+
+</body>
+
+</html>
