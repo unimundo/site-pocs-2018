@@ -7,7 +7,13 @@
   <title>Hello Bulma!</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="./css/unimundo.css">
   <style>
+
+    a.navbar-item.is-active, a.navbar-item:hover, a.navbar-link.is-active, a.navbar-link:hover {
+      background-color: transparent;
+    }
+
     .top-logo {
       display: flex;
       align-items: center;
@@ -23,7 +29,7 @@
     }
     .topic-nav-item {
       margin: 4px;
-      border: 2px solid #eee7d5; border-radius: 5px; margin-right: 5px;
+      // border: 2px solid #eee7d5; border-radius: 5px; margin-right: 5px;
       //background-color: #eee7d540; //#00aae6;
     }
     .topic-nav-item:last-child {
@@ -31,8 +37,9 @@
     }
     .topic-nav-item .level-item span {
       padding-left: 10px;
-      font-size: 14px;
+      font-size: 16px; font-weight: 700;
       text-transform: uppercase;
+      font-family: Signika;
     }
 
     .topic-nav-item a {
@@ -74,41 +81,6 @@
       transition: transform .35s cubic-bezier(.18, .89, .19, 1.37);
     }
 
-    .hero {
-    position: relative;
-      z-index: 1;
-      background-color: #ccc;
-      //margin-left: 44px; // margin-right: 44px;
-    }
-
-    .hero:before {
-//      background: url(./images/27993145_1576524869067445_3938364592319286042_o.jpg);
-      background: url(./images/P1030473.JPG);
-//      background: url('./images/Screen Shot 2018-03-10 at 22.36.05.png');
-      background-size: cover;
-      opacity: 0.6;
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      content: "";
-      z-index: -1;
-    }
-
-    .hero-body h1 {
-      //color: #fff17e;
-      //color: #00AAE6;
-      color: #44f;
-      font-family: sans;
-
-      text-shadow: 2px 2px 8px #fff17e;
-    }
-
-    .hero-body h2 {
-      text-shadow: 2px 2px 8px #fff17e;
-      color: #44f;//#fff17e;
-    }
 
     .testimonial-area {
       padding: 50px;
@@ -177,7 +149,7 @@
   </style>
 </head>
 
-<body xstyle="background-color: #e0f0f8;">
+<body style="background-color: #ffffff;">
   <!--div class="button" style="position: fixed; bottom: 5px; right: 5px; width: 40px; z-index: 100;">
     v
   <div-->
@@ -185,11 +157,11 @@
   <section class="hero is-fullheight">
     <!-- Hero head: will stick at the top -->
     <div class="hero-head">
-      <nav class="navbar is-fixed" style="xbackground-color: #ffffff;">
-        <div class="container" style="height: 60px;">
+      <nav class="navbar is-fixed" style="">
+        <div class="container" style="">
           <div class="navbar-brand">
             <a class="navbar-item">
-              <img src="./images/site-logo3.png" alt="Logo" style="max-height: 40px; height: 40px; width: 170px;">
+              <img src="./images/logo-unimundo.svg" alt="Logo">
             </a>
             <span class="navbar-burger burger" data-target="navbarMenuHeroA">
               <span></span>
@@ -198,9 +170,12 @@
             </span>
           </div>
           <div id="navbarMenuHeroA" class="navbar-menu">
-            <div class="navbar-end" style="font-size: 20px;">
+            <div class="navbar-end" style="">
               <a class="navbar-item is-active">
                 Sobre
+              </a>
+              <a class="navbar-item is-active">
+                Holoterapia
               </a>
               <a class="navbar-item is-active">
                 Blog
@@ -223,7 +198,7 @@
           </div>
         </div>
       </nav>
-      <section id="topic-nav" class="section" style="padding: 12px; xbackground-color: #00aae6; margin-bottom: 12px; display: none">
+      <section id="topic-nav" class="section" style="padding: 12px; background-color: #ffffff; margin-bottom: 12px; xdisplay: none">
         <div class="container is-fluid columns" style="xbackground-color: #00aae6;">
           <div class="topic-nav-item column">
             <div class="level">
@@ -271,7 +246,7 @@
     </div>
 
     <!-- Hero content: will be in the middle -->
-    <div class="hero-body is-background">
+    <div class="hero-body">
       <div class="container has-text-centered">
         <h1 class="title is-size-1" style="font-size: 6rem;">
           Holoterapia Biodinâmica
@@ -284,63 +259,18 @@
     </div>
 
     <!-- Hero footer: will stick at the bottom -->
-    <section id="topic-nav" class="section" style="padding: 12px;">
-      <div class="container is-fluid columns">
-        <div class="topic-nav-item column">
-          <div class="level">
-            <div class="level-item">
-              <a class="xtopic-nav-link">
-                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
-                </a>
-              <span>Despertar</span>
-            </div>
-          </div>
-        </div>
-        <div class="topic-nav-item column">
-          <div class="level">
-            <div class="level-item">
-              <a class="">
-                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
-                </a>
-              <span>Biodinâmica</span>
-            </div>
-          </div>
-        </div>
-        <div class="topic-nav-item column">
-          <div class="level">
-            <div class="level-item">
-              <a class="">
-                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
-                </a>
-              <span>Autoterapia</span>
-            </div>
-          </div>
-        </div>
-        <div class="topic-nav-item column">
-          <div class="level">
-            <div class="level-item">
-              <a class="">
-                  <img src="http://www.luzdaserra.com.br/wp-content/themes/chillnews-child/assets/img/icone-fitoenergetica.png" alt="a" width="65" height="65" scale="0">
-                </a>
-              <span>Parapsiquismo</span>
-            </div>
-          </div>
-        </div>
+    <nav class="tabs is-centered">
+      <div class="container">
+        <ul>
+          <li class="is-active"><a>Overview</a></li>
+          <li><a>Modifiers</a></li>
+          <li><a>Grid</a></li>
+          <li><a>Elements</a></li>
+          <li><a>Components</a></li>
+          <li><a>Layout</a></li>
+        </ul>
       </div>
-    </section>
-      <!--nav class="tabs">
-        <div class="container">
-          <ul>
-            <li class="is-active"><a>Overview</a></li>
-            <li><a>Modifiers</a></li>
-            <li><a>Grid</a></li>
-            <li><a>Elements</a></li>
-            <li><a>Components</a></li>
-            <li><a>Layout</a></li>
-          </ul>
-        </div>
-      </nav-->
-    </div>
+    </nav>
   </section>
 
   <script src="./js/bulma-carousel.js"></script>
