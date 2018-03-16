@@ -20,8 +20,9 @@
 
 .hero-body:before {
 //      background: url(../images/27993145_1576524869067445_3938364592319286042_o.jpg);
-  background: url(../images/P1030473.JPG);
+//  background: url(../images/P1030473.JPG);
 //      background: url('./images/Screen Shot 2018-03-10 at 22.36.05.png');
+  background: url(../images/banner-01.jpg);
   background-size: cover;
   opacity: 0.6;
   position: absolute;
